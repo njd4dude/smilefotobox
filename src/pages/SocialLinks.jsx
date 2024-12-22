@@ -1,20 +1,25 @@
-// SocialLinks.js
 import React from "react";
+import InstagramIcon from '@mui/icons-material/Instagram';
+import FacebookIcon from '@mui/icons-material/Facebook'; // Added for Facebook icon
 
 const SocialLinks = () => {
   return (
-    <div className="absolute bottom-5 left-1/2 transform -translate-x-1/2">
+    <div className="absolute bottom-16 left-0 font-monter">
       <a
-        href="https://instagram.com"
-        className="text-white mx-4 hover:text-yellow-500 transition-colors"
+        href="https://www.instagram.com/smilefotobox.co/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-white mx-4 hover:text-pink-500 transition-colors"
       >
-        Instagram
+        <InstagramIcon className="mr-2" /> Instagram
       </a>
       <a
         href="https://facebook.com"
+        target="_blank"
+        rel="noopener noreferrer"
         className="text-white mx-4 hover:text-blue-500 transition-colors"
       >
-        Facebook
+        <FacebookIcon className="mr-2" /> Facebook
       </a>
     </div>
   );

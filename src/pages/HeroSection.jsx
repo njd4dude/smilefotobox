@@ -1,7 +1,8 @@
 // HeroSection.js
 import React from "react";
+import SocialLinks from "./SocialLinks";
 
-const HeroSection = ({ backgroundImage, handleScrollToBooking }) => {
+const HeroSection = ({ backgroundImage, handleScrollToBooking, logo }) => {
   return (
     <div
       className="h-screen w-full flex justify-center items-center relative"
@@ -14,15 +15,19 @@ const HeroSection = ({ backgroundImage, handleScrollToBooking }) => {
       {/* Blurred Overlay */}
       <div className="absolute inset-0 bg-black bg-opacity-75 backdrop-blur-md"></div>
 
+      <img
+        src={logo}
+        alt="Logo"
+        className="absolute bottom-5 right-5 w-16 sm:w-32 " // Adjust width and position as needed
+      />
+
       {/* Content Container - Title, Tagline at the Top */}
-      <div className="absolute top-10 w-full text-center z-10 space-y-4">
+      <div className="absolute top-10 w-full text-center  space-y-4 font-monter">
         {/* Title */}
-        <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white">
-          Smile Fotobox
-        </h1>
+        <h1 className="text-6xl  font-extrabold text-white">Smile Fotobox Company</h1>
 
         {/* Tagline */}
-        <p className="text-xl sm:text-2xl text-white font-medium">
+        <p className="text-2xl text-white font-medium">
           "Your Smile is our Best Accessory"
         </p>
       </div>
@@ -36,6 +41,7 @@ const HeroSection = ({ backgroundImage, handleScrollToBooking }) => {
           Book Your Event
         </button>
       </div>
+      <SocialLinks />
     </div>
   );
 };

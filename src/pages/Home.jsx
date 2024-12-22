@@ -1,9 +1,10 @@
 // Home.js
+// task 12/21: left off figuring how to pass info to email in booking section. I'm thinking of just doing google form for now.
 import React, { useRef, useState } from "react";
 import HeroSection from "./HeroSection";
-import SocialLinks from "./SocialLinks";
 import GallerySection from "./GallerySection";
 import BookingSection from "./BookingSection";
+
 import Test from "./Test";
 
 const Home = () => {
@@ -15,6 +16,7 @@ const Home = () => {
     "/photo4.jpg",
     "/photo5.jpg",
   ];
+  const logo = "/smilefotoboxLogo.png";
 
   // Create a reference to the booking section
   const bookingRef = useRef(null);
@@ -52,8 +54,8 @@ const Home = () => {
       <HeroSection
         backgroundImage={backgroundImage}
         handleScrollToBooking={handleScrollToBooking}
+        logo={logo}
       />
-      <SocialLinks />
       <GallerySection images={images} />
       <BookingSection
         bookingRef={bookingRef}
