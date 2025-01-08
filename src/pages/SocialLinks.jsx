@@ -4,7 +4,7 @@ import FacebookIcon from '@mui/icons-material/Facebook'; // Added for Facebook i
 
 const SocialLinks = () => {
   return (
-    <div className="absolute bottom-16 left-0 font-monter">
+    <div className="absolute bottom-8 left-0 font-monter text-xs lg:text-sm">
       <a
         href="https://www.instagram.com/smilefotobox.co/"
         target="_blank"

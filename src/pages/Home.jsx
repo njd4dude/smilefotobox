@@ -4,11 +4,13 @@ import React, { useRef, useState } from "react";
 import HeroSection from "./HeroSection";
 import GallerySection from "./GallerySection";
 import BookingSection from "./BookingSection";
+import InstagramPosts from "./InstagramPosts";
+import EquipmentSection from "./EquipmentSection";
+import PhotoboothEquipment from "./PhotoboothEquipment";
+import samplePrint from "../assets/samplePrint.webp";
 
-import Test from "./Test";
 
 const Home = () => {
-  const backgroundImage = "/backgroundImg.jpg";
   const images = [
     "/photo1.jpg",
     "/photo2.jpg",
@@ -52,18 +54,12 @@ const Home = () => {
   return (
     <div className="">
       <HeroSection
-        backgroundImage={backgroundImage}
+        backgroundImage={samplePrint}
         handleScrollToBooking={handleScrollToBooking}
         logo={logo}
       />
-      <GallerySection images={images} />
-      <BookingSection
-        bookingRef={bookingRef}
-        formData={formData}
-        handleInputChange={handleInputChange}
-        handleSubmit={handleSubmit}
-      />
-      <Test />
+      <PhotoboothEquipment />
+      <InstagramPosts />
     </div>
   );
 };
