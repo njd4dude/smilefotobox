@@ -8,7 +8,7 @@ import InstagramPosts from "./InstagramPosts";
 import EquipmentSection from "./EquipmentSection";
 import PhotoboothEquipment from "./PhotoboothEquipment";
 import samplePrint from "../assets/samplePrint.webp";
-
+import Navbar from "./Navbar";
 
 const Home = () => {
   const images = [
@@ -53,6 +53,7 @@ const Home = () => {
 
   return (
     <div className="">
+      <Navbar />
       <HeroSection
         backgroundImage={samplePrint}
         handleScrollToBooking={handleScrollToBooking}

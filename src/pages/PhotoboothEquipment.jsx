@@ -22,7 +22,7 @@ const PhotoboothEquipment = () => {
   };
 
   return (
-    <div className="my-12 max-w-4xl mx-auto p-6 bg-gray-100 rounded-lg shadow-lg">
+    <div className="my-12 max-w-4xl mx-auto p-6 bg-gray-100 rounded-lg shadow-lg" id="equipment">
       <h2 className="text-3xl font-monter font-semibold mb-6 text-center">
         Our Photo Booth Setup and Backdrops
       </h2>
