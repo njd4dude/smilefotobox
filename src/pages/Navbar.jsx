@@ -10,7 +10,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-black p-4 relative">
+    <nav className="bg-black p-4 sticky top-0 z-50">
       <div className="flex justify-end items-center">
         {/* Mobile menu button */}
         <button onClick={toggleMenu} className="text-white lg:hidden">
