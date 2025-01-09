@@ -8,6 +8,7 @@ import InstagramPosts from "./InstagramPosts";
 import EquipmentSection from "./EquipmentSection";
 import PhotoboothEquipment from "./PhotoboothEquipment";
 import samplePrint from "../assets/samplePrint.webp";
+import logo from "../assets/smilefotoboxLogo.png";
 import Navbar from "./Navbar";
 
 const Home = () => {
@@ -18,7 +19,6 @@ const Home = () => {
     "/photo4.jpg",
     "/photo5.jpg",
   ];
-  const logo = "/smilefotoboxLogo.png";
 
   // Create a reference to the booking section
   const bookingRef = useRef(null);
@@ -30,11 +30,6 @@ const Home = () => {
     eventDate: "",
     message: "",
   });
-
-  // Function to handle scroll when the button is clicked
-  const handleScrollToBooking = () => {
-    bookingRef.current.scrollIntoView({ behavior: "smooth" });
-  };
 
   // Handle form input changes
   const handleInputChange = (e) => {
@@ -53,12 +48,8 @@ const Home = () => {
 
   return (
     <div className="">
-      <Navbar />
-      <HeroSection
-        backgroundImage={samplePrint}
-        handleScrollToBooking={handleScrollToBooking}
-        logo={logo}
-      />
+      <Navbar logo={logo} />
+      <HeroSection backgroundImage={samplePrint} logo={logo} />
       <PhotoboothEquipment />
       <InstagramPosts />
     </div>

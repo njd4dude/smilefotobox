@@ -4,5 +4,13 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 80px; /* Default for larger screens */
 }
 
+
+
+@media (max-width: 480px) {
+  html {
+    scroll-padding-top: 220px; /* Mobile screens */
+  }
+}

@@ -4,7 +4,7 @@ import SocialLinks from "./SocialLinks";
 import FeatCards from "./FeatCards";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
-const HeroSection = ({ backgroundImage, handleScrollToBooking, logo }) => {
+const HeroSection = ({ backgroundImage, logo }) => {
   const handleGoogleForm = () => {
     window.open(
       "https://docs.google.com/forms/d/e/1FAIpQLSeGu4gHN_HFx02-3WZ5pFzhi_onrcwTemh8giaK-ExY_GbRsw/viewform",
@@ -14,8 +14,8 @@ const HeroSection = ({ backgroundImage, handleScrollToBooking, logo }) => {
 
   return (
     <div
-      id="home"
       className="h-full w-full relative "
+      id="home"
       style={{
         backgroundImage: `url(${backgroundImage})`,
         backgroundSize: "cover",
@@ -29,7 +29,7 @@ const HeroSection = ({ backgroundImage, handleScrollToBooking, logo }) => {
             Smile Fotobox Company
           </h1>
           <p className="text-2xl text-white font-extrabold">
-            Your Smile is Our Best Accessory
+          Photobooth business serving from Sacramento, California.
           </p>
         </div>
         <FeatCards />

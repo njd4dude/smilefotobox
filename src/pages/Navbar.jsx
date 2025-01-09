@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import "@fortawesome/fontawesome-free/css/all.min.css"; // Ensure it's imported
 
-const Navbar = () => {
+const Navbar = ({ logo }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const logo = "/smilefotoboxLogo.png";
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -23,7 +22,11 @@ const Navbar = () => {
           )}
         </button>
       </div>
-      <img src={logo} alt="Smile Fotobox Co." className="w-24 absolute left-3 top-2" />
+      <img
+        src={logo}
+        alt="Smile Fotobox Co."
+        className="w-24 absolute left-3 top-2"
+      />
 
       {/* Navbar links for mobile */}
       <div
@@ -37,14 +40,15 @@ const Navbar = () => {
         <a href="#equipment" className="text-white py-2 px-4 block">
           Equipment
         </a>
-        <a href="#about" className="text-white py-2 px-4 block">
-          About
+        <a href="#instagram" className="text-white py-2 px-4 block">
+          Instagram
         </a>
-        <a href="#services" className="text-white py-2 px-4 block">
-          Services
-        </a>
-        <a href="#contact" className="text-white py-2 px-4 block">
-          Contact
+        <a
+          href="https://docs.google.com/forms/d/e/1FAIpQLSeGu4gHN_HFx02-3WZ5pFzhi_onrcwTemh8giaK-ExY_GbRsw/viewform"
+          target="_blank"
+          className="text-white py-2 px-4 block"
+        >
+          Book Your Event
         </a>
       </div>
     </nav>
