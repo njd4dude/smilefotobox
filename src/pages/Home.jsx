@@ -10,6 +10,8 @@ import PhotoboothEquipment from "./PhotoboothEquipment";
 import samplePrint from "../assets/samplePrint.webp";
 import logo from "../assets/smilefotoboxLogo.png";
 import Navbar from "./Navbar";
+import Contact from "./Contact";
+import Banner from "./Banner";
 
 const Home = () => {
   const images = [
@@ -47,11 +49,13 @@ const Home = () => {
   };
 
   return (
-    <div className="">
+    <div className="bg-gray-200">
+      <Banner />
       <Navbar logo={logo} />
       <HeroSection backgroundImage={samplePrint} logo={logo} />
       <PhotoboothEquipment />
       <InstagramPosts />
+      <Contact />
     </div>
   );
 };

@@ -9,7 +9,7 @@ const Navbar = ({ logo }) => {
   };
 
   return (
-    <nav className="bg-black p-4 sticky top-0 z-50">
+    <nav className="bg-black p-4 sticky -top-1 z-50">
       <div className="flex justify-end items-center">
         {/* Mobile menu button */}
         <button onClick={toggleMenu} className="text-white lg:hidden">
@@ -42,6 +42,9 @@ const Navbar = ({ logo }) => {
         </a>
         <a href="#instagram" className="text-white py-2 px-4 block">
           Instagram
+        </a>
+        <a href="#contact" className="text-white py-2 px-4 block">
+          Contact
         </a>
         <a
           href="https://docs.google.com/forms/d/e/1FAIpQLSeGu4gHN_HFx02-3WZ5pFzhi_onrcwTemh8giaK-ExY_GbRsw/viewform"

@@ -14,7 +14,7 @@ const SocialLinks = () => {
         <InstagramIcon className="mr-2" /> Instagram
       </a>
       <a
-        href="https://facebook.com"
+        href="https://www.facebook.com/people/Smile-Fotobox-Company/61570955339151/"
         target="_blank"
         rel="noopener noreferrer"
         className="text-white mx-4 hover:text-blue-500 transition-colors"
