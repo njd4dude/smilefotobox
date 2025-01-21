@@ -5,7 +5,6 @@ import { initGA, logPageView } from "./analytics";
 function App() {
   useEffect(() => {
     initGA();
-    logPageView();
   }, []);
 
   return <Home />;

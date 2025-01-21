@@ -1,11 +1,20 @@
 import React, { useState } from "react";
 import "@fortawesome/fontawesome-free/css/all.min.css"; // Ensure it's imported
+import ReactGA from "react-ga4";
 
 const Navbar = ({ logo }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+  };
+
+  const handleLinkClick = (category, label) => {
+    ReactGA.event({
+      category: category,
+      action: "click",
+      label: label,
+    });
   };
 
   return (
@@ -34,22 +43,39 @@ const Navbar = ({ logo }) => {
           isMenuOpen ? "block" : "hidden"
         }`}
       >
-        <a href="#home" className="text-white py-2 px-4 block">
+        <a
+          href="#home"
+          className="text-white py-2 px-4 block"
+          onClick={() => handleLinkClick("Navbar", "Home")}
+        >
           Home
         </a>
-        <a href="#equipment" className="text-white py-2 px-4 block">
+        <a
+          href="#equipment"
+          className="text-white py-2 px-4 block"
+          onClick={() => handleLinkClick("Navbar", "Equipment")}
+        >
           Equipment
         </a>
-        <a href="#instagram" className="text-white py-2 px-4 block">
+        <a
+          href="#instagram"
+          className="text-white py-2 px-4 block"
+          onClick={() => handleLinkClick("Navbar", "Instagram")}
+        >
           Instagram
         </a>
-        <a href="#contact" className="text-white py-2 px-4 block">
+        <a
+          href="#contact"
+          className="text-white py-2 px-4 block"
+          onClick={() => handleLinkClick("Navbar", "Contact")}
+        >
           Contact
         </a>
         <a
           href="https://docs.google.com/forms/d/e/1FAIpQLSeGu4gHN_HFx02-3WZ5pFzhi_onrcwTemh8giaK-ExY_GbRsw/viewform"
           target="_blank"
           className="text-white py-2 px-4 block"
+          onClick={() => handleLinkClick("Navbar", "Book Your Event")}
         >
           Book Your Event
         </a>

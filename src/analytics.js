@@ -7,4 +7,5 @@ export const initGA = () => {
 
 export const logPageView = () => {
   ReactGA.send({ hitType: "pageview", page: window.location.pathname });
+  console.log("Page view logged", window.location.pathname);
 };
